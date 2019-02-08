@@ -1,0 +1,22 @@
+{
+  "name": "tap-spec-report-bug",
+  "version": "1.0.0",
+  "description": "problem demo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node ./test/subject_test.js",
+    "with-tap-spec": "node ./test/subject_test.js | tap-spec",
+    "with-faucet": "node ./test/subject_test.js | faucet"
+  },
+  "author": "Rob Old",
+  "license": "ISC",
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.2",
+    "testdouble": "^3.10.0"
+  }
+}
