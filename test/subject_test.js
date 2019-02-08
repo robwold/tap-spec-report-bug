@@ -34,7 +34,14 @@ test('passing td demo', assert=> {
 test('This will fail horribly', assert => {
     setup();
     subject();
+    // unusedDependency is never invoked by the subject,
+    // so td.verify throws an error here.
     assert.doesNotThrow(function(){td.verify(unusedDependency())});
     teardown(assert);
+});
+
+test('Will this run?', assert => {
+    assert.pass('Not with tap-spec!');
+    assert.end();
 });
 
